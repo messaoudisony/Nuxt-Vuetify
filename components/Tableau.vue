@@ -5,7 +5,7 @@
                 <v-col cols="12" md="2">
                     <v-select v-model="itemsPerPage" :items="itemsPerPageOptions" label="Affichage" />
                 </v-col>
-                
+
                 <v-col cols="12" md="3">
                     <v-select v-model="sortField" :items="sortOptions" label="Trier par" item-title="text"
                         item-value="value" />
@@ -17,7 +17,7 @@
                 </v-col>
             </v-row>
         </v-card>
-        
+
         <v-table theme="dark">
             <thead>
                 <tr>
@@ -44,10 +44,25 @@
                 </tr>
             </tbody>
         </v-table>
-        
+
         <div class="text-center mt-4">
             <v-pagination v-model="currentPage" :length="totalPages" :total-visible="7" />
         </div>
+    </div>
+
+    <div>
+        <v-row justify="center" class="align-center">
+            <v-col cols="auto">
+                <span class="text-caption">Version 1.2</span>
+            </v-col>
+
+            <v-divider vertical class="mx-4" />
+
+        
+            <v-col cols="auto">
+                <span class="text-caption">Works via Chrome</span>
+            </v-col>
+        </v-row>
     </div>
 </template>
 
@@ -101,4 +116,5 @@ const paginatedData = computed(() => {
 watch([sortField, sortOrder, itemsPerPage], () => {
     currentPage.value = 1
 })
+
 </script>
