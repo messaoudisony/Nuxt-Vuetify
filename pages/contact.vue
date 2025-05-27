@@ -6,7 +6,7 @@
             <v-text-field label="Email" v-model="email" type="email" required />
             <v-textarea label="Message" v-model="message" required />
 
-            <v-btn type="submit" color="primary" class="mt-2">Envoyer</v-btn>
+            <v-btn type="submit" color="primary" class="mt-4">Envoyer</v-btn>
         </v-form>
     </v-container>
 </template>
