@@ -70,8 +70,9 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 
-
-const { data } = await useFetch('https://dummyjson.com/users')
+const config = useRuntimeConfig()
+const url = config.public.API_USERS
+const { data } = await useFetch(url)
 const originalUsers = data.value.users
 
 const currentPage = ref(1)
