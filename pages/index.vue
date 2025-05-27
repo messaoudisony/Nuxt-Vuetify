@@ -1,13 +1,13 @@
 <template>
     <v-container>
+        <v-img :src="image1" max-width="400" class="mx-auto mt-6" />
+
         <CardSection />
         <FeatureGrid />
     </v-container>
         <Footer/>
 </template>
 
-<style>
-* {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-}
-</style>
+<script setup lang="ts">
+import image1 from '~/assets/image1.png'
+</script>
